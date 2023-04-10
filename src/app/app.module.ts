@@ -21,6 +21,7 @@ import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestService } from './services/test.service';
 import { EmployeeComponent } from './employee/employee.component';
+import { AddDataComponent } from './add-data/add-data.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { EmployeeComponent } from './employee/employee.component';
     SellerAuthComponent,
     FooterComponent,
     EmployeeComponent,
+    AddDataComponent,
   ],
   imports: [
     BrowserModule,
