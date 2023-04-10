@@ -1,0 +1,34 @@
+<div>
+    <table class="sty">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let id of employes">
+                <td>{{ id.name}}</td>
+                <td>{{ id.status}}</td>
+              </tr>
+        </tbody>
+</table>
+
+<p></p>
+
+<div class="form">
+    <div>
+        <input type="text" placeholder="Username" id="Username" [(ngModel)]="username">
+    </div>
+    <p></p>
+    <div>
+        <select name="status" id="status" [(ngModel)]="status">
+            <option value="active">active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+    </div>
+    <p></p>
+    <div>
+        <button (click)="AddUser()">Add Employe</button>
+    </div>
+</div>

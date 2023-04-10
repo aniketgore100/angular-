@@ -1,0 +1,34 @@
+<!-- <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover table-success">
+        <thead>
+            <tr>
+                <th *ngFor="let key of ColData">{{key.header}}  </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of GridData">
+                <td *ngFor="let key of ColData">
+                    <span>{{record[key.field]}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+<div>
+<table class="sty">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Hero name</th>
+        <th>country</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of heroes">
+            <td>{{ post.id}}</td>
+            <td>{{ post.name}}</td>
+            <td>{{ post.country}}</td>
+          </tr>
+    </tbody>
+  </table>

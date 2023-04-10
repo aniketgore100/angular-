@@ -1,0 +1,316 @@
+<!-- <app-header>My Angular Learning</app-header> -->
+<!-- <app-header>My Angular Learning</app-header>
+<app-form></app-form>
+<app-reuse-table></app-reuse-table> -->
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="search-hero">
+      <input
+        type="text"
+        name="search" [(ngModel)]="searchText"
+        placeholder="search by hero, id or country"
+      />
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Hero name</th>
+          <th>country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroes | filter:searchText">
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.country}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ngb-accordion #acc="ngbAccordion">
+  <ngb-panel title="functions in angular">
+    <ng-template ngbPanelContent>
+      <button (click)="getname('anike gore', 'yashshree')">Hit me</button>
+      <hr />
+      <button (click)="counter('minus')">--</button>
+      count : {{ count }} <button (click)="counter('add')">++</button>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="text box value">
+    <ng-template ngbPanelTitle> </ng-template>
+    <ng-template ngbPanelContent>
+      <input
+        type="text"
+        #in
+        (keyup)="getValue(in.value)"
+        placeholder="enter name"
+        name="name"
+      />
+      <p></p>
+      <input
+        type="text"
+        #inti
+        (keyup)="getVal(inti.value)"
+        placeholder="enter name"
+        name="name"
+      />
+      <p class="hello">{{ displayname + displayval }}</p>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="property binding">
+    <ng-template ngbPanelContent>
+      <input
+        type="text"
+        name="user-name"
+        value="{{ name }}"
+        disabled="{{ disable }}"
+      />
+      <p></p>
+      <input type="text" name="" [value]="surname" [disabled]="disable" />
+      <hr />
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="if else">
+    <ng-template ngbPanelContent>
+      <ng-template [ngIf]="color === 'red'">
+        <h1 style="color: red">red color</h1>
+      </ng-template>
+
+      <ng-template [ngIf]="color === 'green'">
+        <h1 style="color: green">red color</h1>
+      </ng-template>
+
+      <ng-template [ngIf]="color === 'blue'">
+        <h1 style="color: blue">red color</h1>
+      </ng-template>
+
+      <div [ngSwitch]="colors">
+        <h1 *ngSwitchCase="'yellow'" style="color: palegreen">red color</h1>
+      </div>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="Loops">
+    <ng-template ngbPanelContent>
+      <h3 *ngFor="let item of users">{{ item }}</h3>
+      <h3 *ngFor="let item of userDetails">
+        {{ item.email }}--{{ item.phone }}
+      </h3>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="Nested Loops">
+    <ng-template ngbPanelContent>
+      <ul *ngFor="let user of userDetails">
+        <li>
+          <h4 style="border: 1px solid black">
+            UserName : {{ user.name }} PhoneNumber : {{ user.phone }}
+          </h4>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="Toggling">
+    <ng-template ngbPanelContent>
+      <button (click)="toggleOn()">Toggle</button>
+      <p></p>
+      <h1 *ngIf="display">
+        <p>
+          <ngb-alert [dismissible]="false">
+            <h6>
+              <strong>Warning!</strong> Better check yourself, you're not
+              looking too good.
+            </h6>
+          </ngb-alert>
+        </p>
+      </h1>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="notepad">
+    <ng-template ngbPanelContent>
+      <input type="text" placeholder="Enter new task" #task />
+      <p></p>
+      <button (click)="addTask(task.value)">Add</button>
+      <ul *ngFor="let item of list">
+        <li>
+          {{ item.name }}
+          <button (click)="RemoveTask(item.id)">Delete</button>
+        </li>
+      </ul>
+<p></p
+    ></ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="Pass data to child Component">
+    <ng-template ngbPanelContent>
+      <button (click)="upDate()">Child</button>
+      <app-child [items]="data2"></app-child>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="Reusable  Component">
+    <ng-template ngbPanelContent>
+      <ul *ngFor="let user of userInfo">
+        <app-user-details [item]="user"></app-user-details>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel title="tamplate reference variable">
+    <ng-template ngbPanelContent>
+      <app-child-parent
+        (updataDatEvent)="updateData($event)"
+      ></app-child-parent>
+      {{ data }}
+      <p></p>
+      <input type="text" #nap />
+      <button (click)="getv(nap.value)">Hit It</button>
+      {{ val | uppercase }}
+    </ng-template>
+  </ngb-panel>
+
+ -->
+
+<!-- 
+ <app-reuse-table></app-reuse-table> 
+ <hr> -->
+ <!-- <table>
+ <div>
+  <table class="sty2">
+      <thead>
+        <tr>
+          <th>userId</th>
+          <th>id</th>
+          <th>title</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let post of posts">
+              <td>{{ post.userId}}</td>
+              <td>{{ post.id}}</td>
+              <td>{{ post.title}}</td>
+            </tr>
+      </tbody>
+    </table>
+
+  -->
+<!-- 
+  <form #loginform="ngForm" (ngSubmit)="userLogin(loginform.value)">
+    <input type="text" placeholder="Enter Name" name="name" ngModel>
+    <br><br>
+    <input type="password" placeholder="Enter Password" name="password" ngModel>
+    <br><br>
+    <button>Login</button>
+  </form>
+ -->
+
+  <!-- <form [formGroup] ="loginForm" (ngSubmit)="loginUser()">
+    <input type="text" placeholder="Enter Name" formControlName="user">
+    <br>
+    <span style="color:red;" *ngIf=" user && user.invalid && user.touched"> This field is not valid </span><br>
+    <input type="password" placeholder="Enter Password"  formControlName="password">
+    <br><br>
+    <button [disabled]="loginForm.invalid">Login</button>
+  </form> -->
+<!-- 
+
+  <div class="container">
+    <app-pro-head></app-pro-head>
+    <router-outlet></router-outlet>
+  </div> -->
+
+<!-- 
+<li><a routerLink="forms">forms</a><br></li>
+<li><a routerLink="table">table</a><br></li>
+<li><a routerLink="header">header</a></li>
+<router-outlet></router-outlet> 
+<p></p>
+<br>
+<hr> -->
+<!-- 
+<form #userName="ngForm" (ngSubmit)="onClickSubmit(userName.value)">
+<input type="text" name="username" placeholder="useraname" ngModel>
+<br>
+<br>
+<input type="submit" value="submit">
+</form> -->
+<!-- 
+<div class="forms">
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  
+  </div>
+  <div class="form-group mt-4">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" >
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div> -->
+<!-- 
+<app-footer>
+</app-footer> -->
+<!-- 
+<ul>
+  <li *ngFor="let user of users"> {{user.userId}} {{user.title}} <b><i>{{user.completed}}</i></b></li>
+</ul> -->
+<!-- 
+<form #titleForms="ngForm" (ngSubmit)="getTitle(titleForms.value)">
+  <input type="" ngModel name="userId" placeholder="Enter userId">
+  <p></p>
+  <input type="text" ngModel name="title" placeholder="title">
+  <p></p>
+  <input type="text" ngModel name="completed" placeholder="status">
+  <p></p>
+  <button>Add New title</button>
+</form> -->
+<!-- 
+<p>This dropdown uses customized default values.</p>
+
+<div class="row">
+	<div class="col">
+		<div ngbDropdown class="d-inline-block">
+			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+				Toggle dropdown
+			</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+				<button ngbDropdownItem *ngFor="let user of users">{{user.userId}}</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          Toggle dropdown
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem *ngFor="let user of users">{{user.title}}</button>
+        </div>
+      </div>
+    </div>
+  <p></p>
+  -->
+    <!-- <button (click)="  OnEnroll()">click for enroll</button>  -->
+
+    <app-user-details></app-user-details>
+    <app-employee></app-employee>
+  
